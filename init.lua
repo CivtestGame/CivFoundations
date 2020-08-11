@@ -491,7 +491,7 @@ minetest.register_craft({
 })
 
 minetest.register_craft({
-	output = "civfoundations:plaster_white_triangle_r 1",
+	output = "civfoundations:plaster_white_triangle_r 3",
 	type = "shaped",
 	recipe = {
 		{"", "", "group:tree"},
@@ -530,17 +530,133 @@ minetest.register_craft({
 	}
 })
 
+stairs.register_stair_and_slab(
+	"adobe",
+	"civfoundations:adobe",
+	{cracky = 2, crumbly = 1, level = 1},
+	{"civf_adobe.png"},
+	"Adobe Stair",
+	"Adobe Slab",
+	default.node_sound_dirt_defaults(),
+	true
+)
+stairs.register_stair_and_slab(
+	"cobble_plaster",
+	"civfoundations:cobble_plaster",
+	{cracky = 2, level = 1},
+	{"civf_cobble_plaster.png"},
+	"Cobblestone Stair with Plaster",
+	"Cobblestone Slab with Plaster",
+	default.node_sound_stone_defaults(),
+	true
+)
+stairs.register_stair_and_slab(
+	"cobble_flagstone",
+	"civfoundations:cobble_flagstone",
+	{cracky = 2, level = 1},
+	{"civf_cobble_flagstone.png"},
+	"Cobblestone Flagstones Stair",
+	"Cobblestone Flagstones Slab",
+	default.node_sound_stone_defaults(),
+	true
+)
+stairs.register_stair_and_slab(
+	"mudbrick",
+	"civfoundations:mudbrick",
+	{cracky = 2, crumbly = 1, level = 1},
+	{"civf_mudbrick.png"},
+	"Mudbrick Stair",
+	"Mudbrick Slab",
+	default.node_sound_dirt_defaults(),
+	true
+)
+stairs.register_stair_and_slab(
+	"gneiss",
+	"civfoundations:gneiss",
+	{cracky = 2, level = 1},
+	{"civf_gneiss.png"},
+	"Gneiss Stair",
+	"Gneiss Slab",
+	default.node_sound_stone_defaults(),
+	true
+)
+stairs.register_stair_and_slab(
+	"schist",
+	"civfoundations:schist",
+	{cracky = 2, level = 1},
+	{"civf_schist.png"},
+	"Schist Stair",
+	"Schist Slab",
+	default.node_sound_stone_defaults(),
+	true
+)
+stairs.register_stair_and_slab(
+	"slate",
+	"civfoundations:slate",
+	{cracky = 2, level = 1},
+	{"civf_slate.png"},
+	"Slate Stair",
+	"Slate Slab",
+	default.node_sound_stone_defaults(),
+	true
+)
+stairs.register_stair_and_slab(
+	"slate_green",
+	"civfoundations:slate_green",
+	{cracky = 2, level = 1},
+	{"civf_slate_green.png"},
+	"Green Slate Stair",
+	"Green Slate Slab",
+	default.node_sound_stone_defaults(),
+	true
+)
+
+pillars.register_pillar("pillars:cobble_plaster", {
+	description = "Cobblestone Pillar with Plaster",
+	textures = {"civf_cobble_plaster.png"},
+	sounds = sound,
+	groups = {cracky=3, oddly_breakable_by_hand=1},
+	basenode = "civfoundations:cobble_plaster"
+})
+pillars.register_pillar("pillars:gneiss", {
+	description = "Gneiss Pillar",
+	textures = {"civf_gneiss.png"},
+	sounds = sound,
+	groups = {cracky=3, oddly_breakable_by_hand=1},
+	basenode = "civfoundations:gneiss"
+})
 pillars.register_pillar("pillars:marble_green", {
 	description = "Green Marble Pillar",
 	textures = {"civf_marble_green.png"},
 	sounds = sound,
-	groups = {snappy=2, cracky=3, oddly_breakable_by_hand=3},
+	groups = {cracky=3, oddly_breakable_by_hand=1},
 	basenode = "civfoundations:marble_green"
 })
 pillars.register_pillar("pillars:marble_red", {
 	description = "Red Marble Pillar",
 	textures = {"civf_marble_red.png"},
 	sounds = sound,
-	groups = {snappy=2, cracky=3, oddly_breakable_by_hand=3},
+	groups = {cracky=3, oddly_breakable_by_hand=1},
 	basenode = "civfoundations:marble_red"
+})
+pillars.register_pillar("pillars:schist", {
+	description = "Schist Pillar",
+	textures = {"civf_schist.png"},
+	sounds = sound,
+	groups = {cracky=3, oddly_breakable_by_hand=1},
+	basenode = "civfoundations:schist"
+})
+pillars.register_pillar("pillars:slate", {
+	description = "Slate Pillar",
+	textures = {"civf_slate.png"},
+	sounds = sound,
+	groups = {cracky=3, oddly_breakable_by_hand=1},
+	basenode = "civfoundations:slate"
+})
+pillars.register_pillar("pillars:slate_green", {
+	description = "Green Slate Pillar",
+	textures = {"civf_slate_green.png"},
+	sounds = sound,
+	groups = {cracky=3, oddly_breakable_by_hand=1},
+	basenode = "civfoundations:slate_green"
 })
